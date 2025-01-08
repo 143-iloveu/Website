@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Gallery</title>
+	<link rel="stylesheet" href="style.css">
+
+	<style>
+		.gallery-container
+		{
+			display: inline-flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			justify-content: center;
+		}
+		.gallery-item img
+		{
+			width: 400px;
+			height: 400px;
+			object-fit: cover;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: transform 0.3s, box-shadow 0.3s;
+		}
+		.gallery-item img:hover
+		{
+			transform: scale(1.5);
+		}
+		.description-box
+		{
+			margin-top: 20px;
+			padding: 10px;
+			background-color: slateblue;
+			border: 2px dotted royalblue;
+			border-radius: 3px;
+			font-size: 30px;
+			color: red;
+			text-align: center;
+		}
+		a:link, a:visited
+		{
+			color: blanchedalmond;
+			background-color: red;
+			text-decoration: none;
+			text-align: center;
+			padding: 15px;
+			display: inline-block;
+			border-radius: 15px;
+		}
+		a:hover, a:active
+		{
+			color: darkred;
+			background-color: deeppink;
+		}
+	</style>
+</head>
+<body>
+
+	<nav>
+		<ul>
+			<li><a href="file:///C:/Users/User/Desktop/IMD318/Class/homepage.html#home" target="blank">Home</a></li>
+			<li><a href="file:///C:/Users/User/Desktop/IMD318/Class/biodata.html" target="blank">Biodata</a></li>
+			<li><a href="file:///C:/Users/User/Desktop/IMD318/Class/education.html" target="blank">Education</a></li>
+			<li><a href="file:///C:/Users/User/Desktop/IMD318/Class/experience.html" target="blank">Experience</a></li>
+			<li><a href="file:///C:/Users/User/Desktop/IMD318/Class/family.html" target="blank">Family</a></li>
+			<li><a href="file:///C:/Users/User/Desktop/IMD318/Class/gallery.html" target="blank">Gallery</a></li>
+		</ul>
+	</nav>
+
+	<section id="gallery">
+		<h2>My Gallery</h2>
+		<p>Click on the images below for the caption.</p>
+		<div class="gallery-container">
+			<div class="gallery-item" onclick="showDescription('Hari Raya Pertama 2024')">
+				<img src="images/raya.jpg" alt="Hari Raya Pertama 2024">
+			</div>
+			<div class="gallery-item" onclick="showDescription('Hari Raya Kedua 2024')">
+				<img src="images/raya2.jpg" alt="Hari Raya Kedua 2024">
+			</div>	
+			<div class="gallery-item" onclick="showDescription('Houseboat with Big Family')">
+				<img src="images/boat.jpg" alt="Houseboat">
+			</div>
+			<div class="gallery-item" onclick="showDescription('Kakak Convocation Day')">
+				<img src="images/convo.jpg" alt="Convo Day">
+			</div>
+			<div class="gallery-item" onclick="showDescription('Selfie Convo')">
+				<img src="images/convo2.jpg" alt="Selfie Time">
+			</div>
+			<div class="gallery-item" onclick="showDescription('With Prime Mover Club')">
+				<img src="images/pmv.jpg" alt="PMV Club">
+			</div>
+			<div class="gallery-item" onclick="showDescription('Outreach Program')">
+				<img src="images/class.jpg" alt="Outreach Program">
+			</div>
+			<div class="gallery-item" onclick="showDescription('Being a Fasilitator')">
+				<img src="images/fasi.jpg" alt="Faci">
+			</div>
+			<div class="gallery-item" onclick="showDescription('Internship Life')">
+				<img src="images/intern.jpg" alt="Intern Life">
+			</div>
+			<div class="gallery-item" onclick="showDescription('My Bulus')">
+				<img src="images/kittie.jpg" alt="My Bulus">
+			</div>
+			<div class="gallery-item" onclick="showDescription('Hang out with my friends')">
+				<img src="images/friend.jpg" alt="My Friends">
+			</div>
+			<div class="gallery-item" onclick="showDescription('Last Day of Internship')">
+				<img src="images/last.jpg" alt="Last Day of Intership">
+			</div>
+		</div>
+
+		<div id="image-description" class="description-box">
+			<p>Click on the images to see the caption here!</p>
+		</div>
+	</section>
+
+	
+	<script>
+	function showDescription(description) {
+    	const descriptionBox = document.getElementById('image-description');
+    	descriptionBox.innerHTML = `<p>${description}</p>`;
+	}
+	</script>
+
+
+</body>
+</html>
